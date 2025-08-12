@@ -162,7 +162,7 @@
             animation: fadeInUp 1s ease;
         }
 
-        .hero h1 {
+        .hero h2 {
             font-size: 4rem;
             font-weight: 800;
             margin-bottom: 1rem;
@@ -203,15 +203,15 @@
         .hero-image-overlay {
             position: relative;
             margin-right: 30px;
-            width: 400px; /* Adjust size as needed */
-            height: 400px;
+            width: 350px; /* Adjust size as needed */
+            height: 350px;
             border-radius: 50%;
             overflow: hidden;
             box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
         }
 
         .hero-profile-pic {
-            width: 100%;
+            width: 200%;
             height: 100%;
             object-fit: contain;
 
