@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Racman Montes - CV</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  /* Reset & Base Styles */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .cv-container {
+    background: #fff;
+    width: 210mm; /* A4 width */
+    min-height: auto; /* let height grow */
+    display: flex;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: visible; /* IMPORTANT: allow full content for PDF */
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .left-col {
+    background: linear-gradient(to bottom, #2c3e50, #1a2530);
+    color: #f8f9fa;
+    padding: 30px 20px;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+  }
+  .profile-pic {
+    width: 150px; height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #1abc9c;
+    margin: 0 auto 20px;
+  }
+  .name { text-align:center; font-size:1.6rem; font-weight:700; margin-bottom:8px; }
+  .role { text-align:center; font-size:1rem; margin-bottom:30px; color:#1abc9c; opacity:0.9; }
+  .section-title { font-size:1.1rem; margin:20px 0 12px; border-bottom:2px solid #1abc9c; display:inline-block; }
+  .contact-list, .skills-list, .project-list { list-style:none; padding-left:0; }
+  .contact-list li, .skills-list li, .project-list li { margin-bottom:10px; font-size:0.9rem; }
+  .contact-list i { margin-right:10px; width:18px; text-align:center; color:#1abc9c; }
+  .right-col {
+    padding: 35px;
+    width: 65%;
+    overflow: visible;
+  }
+  .right-col h2 { font-size:1.4rem; color:#2c3e50; margin-bottom:15px; padding-left:12px; border-left:4px solid #1abc9c; }
+  .section { margin-bottom:22px; page-break-inside: avoid; } /* avoid breaking inside a section */
+  .section p, .education-item p, .experience-item p { font-size:0.95rem; line-height:1.6; color:#666; }
+  .education-item, .experience-item { margin-bottom:18px; }
+  .education-item h3, .experience-item h3 { font-size:1.1rem; color:#2c3e50; margin-bottom:5px; }
+  .btn { display:inline-flex; align-items:center; justify-content:center; padding:12px 25px; background:#1abc9c; color:white; border-radius:6px; text-decoration:none; font-size:1rem; font-weight:500; cursor:pointer; border:none; box-shadow:0 4px 6px rgba(26,188,156,0.3); transition: all 0.3s ease; }
+  .btn:hover { background:#16a085; transform: translateY(-2px); box-shadow:0 6px 12px rgba(26,188,156,0.4); }
+  .btn i { margin-right:8px; }
+  @media (max-width: 900px) {
+    .cv-container { flex-direction: column; width:100%; }
+    .left-col, .right-col { width:100%; text-align:center; }
+    .contact-list li { justify-content:center; }
+  }
+  @media print {
+    body { background:none; padding:0; }
+    .cv-container { box-shadow:none; border-radius:0; width:100%; min-height:auto; }
+    .btn-container { display:none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- CV Container -->
+<div class="cv-container" id="cv">
+  <div class="left-col">
+    <img src="images/x.jpeg" alt="Profile Picture" class="profile-pic">
+    <h1 class="name">Racman N. Montes</h1>
+    <p class="role">Future Full-Stack Web Developer & Creative Technologist</p>
+    <h3 class="section-title">Contact</h3>
+    <ul class="contact-list">
+      <li><i class="fas fa-envelope"></i> racmanmontes@example.com</li>
+      <li><i class="fas fa-phone"></i> +63 912 345 6789</li>
+      <li><i class="fas fa-map-marker-alt"></i> Philippines</li>
+      <li><i class="fab fa-github"></i> github.com/racman</li>
+      <li><i class="fab fa-linkedin"></i> linkedin.com/in/racman</li>
+    </ul>
+    <h3 class="section-title">Skills</h3>
+    <ul class="skills-list">
+      <li>HTML, CSS, JavaScript, PHP</li>
+      <li>Kotlin, Java</li>
+      <li>Graphic & Video Editing</li>
+      <li>MySQL, Bootstrap</li>
+      <li>React, Node.js</li>
+      <li>UI/UX Design</li>
+    </ul>
+  </div>
+
+  <div class="right-col">
+    <div class="section">
+      <h2>Profile</h2>
+      <p>Motivated and passionate aspiring Full-Stack Developer with a strong foundation in both front-end and back-end technologies...</p>
+    </div>
+    <div class="section">
+      <h2>Education</h2>
+      <div class="education-item">
+        <h3>Bachelor of Science in Information Technology</h3>
+        <p>Ilocos Sur Polytechnic State College (ISPSC)</p>
+        <p>2023 - Present</p>
+      </div>
+      <div class="education-item">
+        <h3>Web Development Bootcamp</h3>
+        <p>FreeCodeCamp</p>
+        <p>2025</p>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Experience</h2>
+      <div class="experience-item">
+        <h3>Freelance Web Developer</h3>
+        <p>Personal Projects | 2025 - Present</p>
+        <p>Designed and developed responsive websites, integrated backend features with PHP & MySQL, and implemented modern UI/UX principles...</p>
+      </div>
+      <div class="experience-item">
+        <h3>IT Intern</h3>
+        <p>Local Tech Solutions | Summer 2025</p>
+        <p>Assisted in website maintenance, troubleshooting technical issues, and implementing new features...</p>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Projects</h2>
+      <ul class="project-list">
+        <li><strong>Novra Cart:</strong> E-commerce platform with AI features and secure payment integration.</li>
+        <li><strong>Smart Reviewer:</strong> Offline-friendly study tool that analyzes lessons and generates questions.</li>
+        <li><strong>Portfolio Website:</strong> Responsive personal portfolio showcasing projects and skills.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Save as PDF button -->
+<div class="btn-container">
+  <button class="btn" id="download"><i class="fas fa-download"></i> Save as PDF</button>
+</div>
+
+<!-- html2pdf -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+document.getElementById("download").addEventListener("click", () => {
+  const element = document.getElementById("cv");
+  
+  const opt = {
+    margin: [15, 10, 15, 10], // top, left, bottom, right
+    filename: 'RacmanMontes-CV.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
+    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+    pagebreak: { mode: ['css', 'legacy'] }
+  };
+
+  html2pdf().set(opt).from(element).save();
+});
+</script>
+</body>
+</html>
