@@ -163,15 +163,16 @@
         }
 
         .hero h2 {
-            font-size: 4rem;
+            font-size: 3rem;
             font-weight: 800;
             margin-bottom: 1rem;
             background: linear-gradient(135deg, var(--text-light), var(--text-gray));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            font-family: 'Cinzel Decorative', serif;
             text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-            text-align: left; /* Ensure left-aligned */
+           
         }
 
         .hero .subtitle {
@@ -626,3 +627,114 @@
             }
         }
     
+
+
+
+
+
+
+    /* === HERO SECTION STYLES === */
+
+/* CTA Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-button.primary {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.cta-button.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.cta-button.secondary {
+  border: 2px solid #6a11cb;
+  color: #6a11cb;
+  background: transparent;
+}
+
+.cta-button.secondary:hover {
+  background: #6a11cb;
+  color: #fff;
+}
+
+/* Social Media Icons */
+.hero-socials {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.hero-socials a {
+  font-size: 2rem;
+  color: #aaa;
+  transition: color 0.3s ease, transform 0.2s;
+}
+
+.hero-socials a:hover {
+  color: #6a11cb;
+  transform: scale(1.2);
+}
+
+
+
+
+
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-col h3 {
+  color: #fff;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #f90; /* Orange hover like Pornhub */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 100px;
+  border-top: 5px solid #333;
+  padding-top: 50px;
+  color: #777;
+}
+
